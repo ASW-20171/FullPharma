@@ -1,0 +1,3 @@
+angular.module('myMod').controller('MyrouteCtrl', function ($scope) {
+  // ...
+});
