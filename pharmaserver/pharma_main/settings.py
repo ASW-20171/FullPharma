@@ -42,7 +42,10 @@ INSTALLED_APPS = [
     'corsheaders',
     'oauth2_provider',
 
-    'pharma_models.almacen'
+    'pharma_models.almacen',
+    'pharma_models.venta',
+    'pharma_models.compra',
+    'pharma_models.persona'
 ]
 
 MIDDLEWARE_CLASSES = [
