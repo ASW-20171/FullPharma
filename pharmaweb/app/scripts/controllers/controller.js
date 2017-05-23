@@ -2,12 +2,12 @@
 
 /**
  * @ngdoc function
- * @name arquitecturaApp.controller:ControllerCtrl
+ * @name pharmawebApp.controller:ControllerCtrl
  * @description
  * # ControllerCtrl
- * Controller of the arquitecturaApp
+ * Controller of the pharmawebApp
  */
-angular.module('arquitecturaApp')
+angular.module('pharmawebApp')
   .controller('ControllerCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',

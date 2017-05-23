@@ -1,0 +1,45 @@
+.table-wrapper
+
+  width 100%
+
+  .icono-habilitado
+    color #00c853
+
+  .icono-deshabilitado
+    color #e53935
+
+  table
+    tbody
+      tr
+        td
+          padding 0px 5px
+
+@media (max-width: 600px)
+
+  .table-wrapper
+    overflow-x scroll
+
+.progress
+  position relative
+  height 13px
+  display block
+  width 50%
+  background-color #acece6
+  border-radius 2px
+  margin 0.5rem 0 1rem 0
+  overflow hidden
+
+  .progress .determinate
+    position absolute
+    background-color inherit
+    top 0
+    left 0
+    bottom 0
+    transition width .3s linear
+
+.nombre_documento {
+  max-width 100px
+  text-overflow ellipsis
+  white-space nowrap
+  overflow hidden
+}

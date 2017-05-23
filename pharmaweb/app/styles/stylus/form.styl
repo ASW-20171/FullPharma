@@ -1,0 +1,225 @@
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill
+  background-color #fff !important
+  -webkit-box-shadow 0 0 0px 1000px #fff inset !important
+  background-image none
+  color: rgb(0, 0, 0)
+
+.input-field
+  margin-bottom 2rem
+
+input[type=text]
+  &:focus
+    border-bottom 1px solid $colorApp
+    box-shadow 0 0 0 0 $colorApp
+    &:not([readonly]) + label
+      color $colorAppLigh1
+  &.valid
+    border-bottom 1px solid $colorApp
+    box-shadow 0 0 0 0 $colorApp
+
+  &.invalid
+    border-bottom 1px solid $msgError
+    box-shadow 0 0 0 0 $msgError
+
+input[type=password]
+  &:focus
+    border-bottom 1px solid $colorApp
+    box-shadow 0 0 0 0 $colorApp
+    &:not([readonly]) + label
+      color $colorAppLigh1
+  &.valid
+    border-bottom 1px solid $colorApp
+    box-shadow 0 0 0 0 $colorApp
+
+  &.invalid
+    border-bottom 1px solid $msgError
+    box-shadow 0 0 0 0 $msgError
+
+input[type=email]
+  &:focus
+    border-bottom 1px solid $colorApp
+    box-shadow 0 0 0 0 $colorApp
+  &.valid
+    border-bottom 1px solid $colorApp
+    box-shadow 0 0 0 0 $colorApp
+
+input[type=checkbox]
+  &:checked
+    & + label
+      &:before
+        border-right 2px solid $colorApp
+        border-bottom 2px solid $colorApp
+
+label
+  width auto
+  &.active
+    color $colorApp !important
+
+md-autocomplete
+  height auto
+  margin-left 3rem
+
+  md-autocomplete-wrap
+    background #fff
+    border-bottom none
+    box-shadow none
+    height auto
+
+    &:focus
+      background-color transparent !important
+      border-bottom 1px solid $colorApp
+      box-shadow 0 1px 0 0 $colorApp
+
+    input[type=search]
+      border-bottom 1px solid $colorBordeInput
+      box-sizing content-box
+      height 3rem
+      padding-left 0rem !important
+
+      &:focus
+        background-color transparent !important
+        border-bottom 1px solid $colorApp
+        box-shadow 0 1px 0 0 $colorApp
+
+textarea
+  &.materialize-textarea
+    &:focus
+      border-bottom $colorApp
+      box-shadow 0 2px 0 0 $colorApp
+
+    &.valid
+      border-bottom $colorApp
+      box-shadow 0 2px 0 0 $colorApp
+
+.prefix
+  &.active
+    color $colorApp
+
+.select-wrapper
+  height 4rem
+  margin-left 3rem
+  margin-bottom 15px
+  & + label
+    &.active
+      top 1.3rem
+
+.msg
+  font-size 0.8rem
+  margin-left 3.75rem
+  position relative
+  top 0px
+  .msg-error
+    color $msgError
+    position absolute
+
+  .msg-info
+    color $msgInfo
+    position absolute
+
+.picker__date-display
+  background-color $colorApp
+  .picker__weekday-display
+    background-color $colorAppLigh1
+
+.card-title-search
+  height 64px
+  line-height 64px
+  width 100%
+  .title-form
+    color rgba(0, 0, 0, 0.87)
+
+    font-size 2.1rem
+    padding 0
+
+  .buscador-wrapper
+    .icono-buscador
+      top 4.25px
+
+.select-dropdown
+  li
+    span
+      color $colorApp
+
+.estilo-caja
+  border-style solid
+  border-color #0288d1 !important
+  border-width 2px !important
+  border-radius 4px !important
+
+.row .col.m8
+  margin-bottom 0px
+
+.row .col.m6
+  margin-bottom 0
+  padding-bottom 17px
+
+.row .col.m12
+  margin-bottom auto
+  padding-bottom 1px
+
+.input-field .prefix ~ textarea
+  padding-bottom 0
+
+.fixed-action-btn_1
+
+  background-color white
+
+  a
+    position absolute
+
+.input-field label.active
+  width 190px
+
+.size-buttom
+  font-size smaller
+  padding 0 0.5rem
+
+.input-field .select-wrapper
+  margin-bottom 0 !important
+
+.select-style
+  margin-bottom: 16px !important
+
+.estilo_form
+  border-bottom 0 !important
+  text-align center !important
+  box-shadow 0 !important
+
+.estilo-box
+  height 49px
+  padding-bottom 0
+  margin-bottom 0
+
+.estilo-td
+  padding 15px 5px !important
+
+
+.td-align
+  padding 0 5px !important
+
+.estilo-th
+  padding 0px 5px !important
+
+.input-field md-autocomplete
+  margin-left 2rem
+
+.input-field md-autocomplete md-autocomplete-wrap input[type=search]
+  margin-bottom 0px
+  padding-right 0px
+
+md-autocomplete
+  min-width 153px !important
+
+.size-field
+  margin-bottom 0 !important
+
+.table_td
+  padding-right 5px
+  padding-left 5px
+  padding-top 0px
+  padding-bottom 0px
+  width 0
+ 
+.div-size 
+  margin-bottom 0
+  margin-top 0

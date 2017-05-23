@@ -1,0 +1,127 @@
+header
+  .navbar-fixed
+    .nav-wrapper
+      .button-collapse
+        width 60px
+
+        i
+          margin auto
+
+#menu-container
+  padding-left 0
+  padding-right inherit
+  width 16%
+  
+  #left-sidebar-nav
+    padding 0
+
+    ul.collapsible
+      margin-top 0px
+        
+      .collection-item
+        cursor pointer
+        line-height 3rem
+        padding 0 1rem
+        font-size 13px
+    
+              
+        a
+          display block
+          overflow hidden
+          padding-left 16px
+          white-space nowrap
+          word-break break-word 
+          
+    
+        .material-icons
+          float left
+          line-height 3rem
+          margin-right 1rem
+          text-align center
+          width 2rem
+
+      .profile-btn
+        display block
+        margin 0
+        padding 0
+        text-transform capitalize
+        text-shadow 1px 1px 1px #444
+
+        .material-icons
+          display block
+          float right
+          margin-right 1rem
+          width 2rem
+
+      .profile-image
+        height 45px
+        width 45px
+
+  #left-sidebar-nav-movil
+    width 200px
+    
+ 
+
+    ul.collapsible
+      margin-top 0px
+      line-height 3rem
+      
+      
+      
+      .collapsible-header
+        background transparent
+        border-bottom 1px solid #ddd
+        color $colorApp
+        line-height 3rem
+        margin 0
+      
+      .collection-item
+        cursor pointer
+        line-height 3rem
+        padding 0 1rem  
+
+        a
+          color $colorAppLigh1
+          display inline-flex
+          height 40px
+          line-height 3rem
+          margin 0   
+          padding-left 16px
+
+
+        .material-icons
+          float left
+          line-height 3rem
+          margin-right 1rem
+          text-align center
+          width 2rem
+        
+  
+  #profile-container
+    background-image linear-gradient(to right, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)),url("../images/profile/profile-menu.png")
+    background-size cover
+    padding-top 1.5em
+    margin-bottom 0
+
+.menu-usuario
+  li 
+    a
+      color $colorApp
+      
+.collapsible-header
+  
+  .expand-less
+    display none
+    float right
+    margin-right 0
+    
+  .expand-more
+    float right
+    margin-right 0
+    
+  &.active
+    .expand-less
+      display block
+      
+    .expand-more
+      display none

@@ -1,0 +1,56 @@
+#breadcrumb
+  color #FFF
+  list-style none
+  margin 0
+  padding 10px
+  width 100%
+
+  li
+    display inline-block
+    vertical-align top
+
+    &:first-child
+      margin-right 0px
+
+      &:before
+        content 'home'
+        font-family 'Material Icons'
+        font-weight normal
+        font-style normal
+        font-size 24px
+        display inline-block
+        width 1em
+        height 1em
+        line-height 1
+        text-transform none
+        letter-spacing normal
+        margin-right 10px
+        word-wrap normal
+        white-space nowrap
+        direction ltr
+        -webkit-font-smoothing antialiased
+        text-rendering optimizeLegibility
+        vertical-align bottom
+
+    &:not(:first-child)
+      margin-left 10px
+
+      &:before
+        content 'chevron_right'
+        font-family 'Material Icons'
+        font-weight normal
+        font-style normal
+        font-size 24px
+        display inline-block
+        width 1em
+        height 1em
+        line-height 1
+        text-transform none
+        letter-spacing normal
+        word-wrap normal
+        white-space nowrap
+        margin-right 10px
+        direction ltr
+        -webkit-font-smoothing antialiased
+        text-rendering optimizeLegibility
+        vertical-align bottom

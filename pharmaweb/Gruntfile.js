@@ -72,7 +72,7 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost',
+        hostname: '0.0.0.0',
         livereload: 35729
       },
       livereload: {
@@ -432,6 +432,7 @@ module.exports = function (grunt) {
       'wiredep',
       'concurrent:server',
       'postcss:server',
+      'autoprefixer:server',
       'connect:livereload',
       'watch'
     ]);
@@ -457,6 +458,7 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concurrent:dist',
     'postcss',
+    'autoprefixer',
     'ngtemplates',
     'concat',
     'ngAnnotate',
