@@ -20,4 +20,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     
     url(r'^api/pharma/', include('pharma_models.almacen.urls')),
+    url(r'^api/pharma/', include('pharma_models.venta.urls')),
+    url(r'^api/pharma/', include('pharma_models.compra.urls')),
+    url(r'^api/pharma/', include('pharma_models.persona.urls')),
 ]

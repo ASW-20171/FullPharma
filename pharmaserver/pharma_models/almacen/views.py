@@ -1,21 +1,11 @@
 from django.shortcuts import render
 from rest_framework import serializers, viewsets
-from .models import ProductoMdl, CategoriaMdl, RecordVentaMdl, RecordVendedorMdl, PedidoMdl
+from .models import ProductoMdl, AlmacenMdl
 
 # Create your views here.
 
-class CategoriaSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = CategoriaMdl
-
-class CategoriaViewSet(viewsets.ModelViewSet):
-    queryset = CategoriaMdl.objects.all()
-    serializer_class = CategoriaSerializer
-
 class ProductoSerializer(serializers.ModelSerializer):
 #    tipo_categoria = serializers.SerializerMethodField()
-    categoria = CategoriaSerializer(read_only=True)
 
     class Meta:
         model = ProductoMdl
@@ -26,31 +16,43 @@ class ProductoSerializer(serializers.ModelSerializer):
 class ProductoViewSet(viewsets.ModelViewSet):
     queryset = ProductoMdl.objects.all()
     serializer_class = ProductoSerializer
+
+class AlmacenSerializer(serializers.ModelSerializer):
+
+    producto = ProductoSerializer(read_only=True)
+
+    class Meta:
+        model = AlmacenMdl
+
+class AlmacenViewSet(viewsets.ModelViewSet):
+    queryset = AlmacenMdl.objects.all()
+    serializer_class = AlmacenSerializer
+
 #    permission_classes = [ModelPermission, ]
 
-class PedidoSerializer(serializers.ModelSerializer):
+# class PedidoSerializer(serializers.ModelSerializer):
 
-    class Meta:
-        model = PedidoMdl
+#     class Meta:
+#         model = PedidoMdl
 
-class PedidoViewSet(viewsets.ModelViewSet):
-    queryset = PedidoMdl.objects.all()
-    serializer_class = PedidoSerializer
+# class PedidoViewSet(viewsets.ModelViewSet):
+#     queryset = PedidoMdl.objects.all()
+#     serializer_class = PedidoSerializer
 
-class RecordVentaSerializer(serializers.ModelSerializer):
+# class RecordVentaSerializer(serializers.ModelSerializer):
 
-    class Meta:
-        model = RecordVentaMdl
+#     class Meta:
+#         model = RecordVentaMdl
 
-class RecordVentaViewSet(viewsets.ModelViewSet):
-    queryset = RecordVentaMdl.objects.all()
-    serializer_class = RecordVentaSerializer
+# class RecordVentaViewSet(viewsets.ModelViewSet):
+#     queryset = RecordVentaMdl.objects.all()
+#     serializer_class = RecordVentaSerializer
 
-class RecordVendedorSerializer(serializers.ModelSerializer):
+# class RecordVendedorSerializer(serializers.ModelSerializer):
 
-    class Meta:
-        model = RecordVendedorMdl
+#     class Meta:
+#         model = RecordVendedorMdl
 
-class RecordVendedorViewSet(viewsets.ModelViewSet):
-    queryset = RecordVendedorMdl.objects.all()
-    serializer_class = RecordVendedorSerializer
+# class RecordVendedorViewSet(viewsets.ModelViewSet):
+#     queryset = RecordVendedorMdl.objects.all()
+#     serializer_class = RecordVendedorSerializer
