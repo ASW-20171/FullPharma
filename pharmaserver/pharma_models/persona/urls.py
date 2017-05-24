@@ -3,15 +3,15 @@ from rest_framework import routers
 from rest_framework_extensions.routers import ExtendedSimpleRouter
 
 
-from .views import UsuarioViewSet, TipoDocViewSet, ClienteViewSet, ProveedorViewSet
-
+from .views import TipoDocViewSet, ClienteViewSet, ProveedorViewSet
+#UsuarioViewSet
 
 # from .api_views import load_menu
 
 #router = ExtendedSimpleRouter()
 router = routers.DefaultRouter()
 
-router.register(r'usuarios', UsuarioViewSet)
+#router.register(r'usuarios', UsuarioViewSet)
 
 router.register(r'tipodocs', TipoDocViewSet)
 
@@ -21,7 +21,7 @@ router.register(r'proveedor', ProveedorViewSet)
 
 urlpatterns = [
 
-    url(r'^usuario/$', UsuarioViewSet),
+    #url(r'^usuario/$', UsuarioViewSet),
 
     url(r'^tipodoc/$', TipoDocViewSet),
 

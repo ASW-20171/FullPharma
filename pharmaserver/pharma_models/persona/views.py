@@ -1,9 +1,9 @@
 from django.shortcuts import render
 from rest_framework import serializers, viewsets
-from .models import UsuarioMdl, TipoDocMdl, ClienteMdl, ProveedorMdl
+from .models import TipoDocMdl, ClienteMdl, ProveedorMdl
 
 # Create your views here.
-
+"""
 class UsuarioSerializer(serializers.ModelSerializer):
 #    tipo_categoria = serializers.SerializerMethodField()
 
@@ -16,6 +16,7 @@ class UsuarioSerializer(serializers.ModelSerializer):
 class UsuarioViewSet(viewsets.ModelViewSet):
     queryset = UsuarioMdl.objects.all()
     serializer_class = UsuarioSerializer
+"""
 
 class TipoDocSerializer(serializers.ModelSerializer):
 

@@ -13,7 +13,7 @@ class TipoDocMdl(models.Model):
 
     def __str__(self):
         return self.nombre
-
+"""
 class UsuarioMdl(models.Model):
     usuario = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
@@ -28,7 +28,7 @@ class UsuarioMdl(models.Model):
 
     def __str__(self):
         return self.usuario
-
+"""
 class ClienteMdl(models.Model):
     razon_social = models.CharField(max_length=100)
     doc = models.ForeignKey(TipoDocMdl, null=True, blank=True)
