@@ -14,20 +14,20 @@ class ProductoMdl(models.Model):
     def __str__(self):
         return self.nombre
 
-class AlmacenMdl(models.Model):
-    descripcion = models.TextField()
-    fecha_ingreso = models.DateField()
-    fecha_salida = models.DateField()
-    producto = models.ForeignKey(ProductoMdl, null=True, blank=True)
-    precio = models.IntegerField()
-    estado = models.BooleanField(default=True)
-    
-    class Meta:
-        verbose_name = "Almacen"
-        verbose_name_plural = "Almacenes"
-
-    def __str__(self):
-        return self.descripcion
+#class AlmacenMdl(models.Model):
+#    descripcion = models.TextField()
+#    fecha_ingreso = models.DateField()
+#    fecha_salida = models.DateField()
+#    producto = models.ForeignKey(ProductoMdl, null=True, blank=True)
+#    precio = models.IntegerField()
+#    estado = models.BooleanField(default=True)
+#    
+#    class Meta:
+#        verbose_name = "Almacen"
+#        verbose_name_plural = "Almacenes"
+#
+#    def __str__(self):
+#        return self.descripcion
 
 
 # class PedidoMdl(models.Model):

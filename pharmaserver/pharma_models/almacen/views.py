@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework import serializers, viewsets
-from .models import ProductoMdl, AlmacenMdl
+from .models import ProductoMdl
 
 # Create your views here.
 
@@ -17,16 +17,16 @@ class ProductoViewSet(viewsets.ModelViewSet):
     queryset = ProductoMdl.objects.all()
     serializer_class = ProductoSerializer
 
-class AlmacenSerializer(serializers.ModelSerializer):
+#class AlmacenSerializer(serializers.ModelSerializer):
 
-    producto = ProductoSerializer(read_only=True)
+ #   producto = ProductoSerializer(read_only=True)
 
-    class Meta:
-        model = AlmacenMdl
+ #   class Meta:
+ #       model = AlmacenMdl
 
-class AlmacenViewSet(viewsets.ModelViewSet):
-    queryset = AlmacenMdl.objects.all()
-    serializer_class = AlmacenSerializer
+#class AlmacenViewSet(viewsets.ModelViewSet):
+#    queryset = AlmacenMdl.objects.all()
+#    serializer_class = AlmacenSerializer
 
 #    permission_classes = [ModelPermission, ]
 

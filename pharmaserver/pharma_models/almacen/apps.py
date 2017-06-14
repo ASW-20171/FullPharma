@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class AlmacenConfig(AppConfig):
-    name = 'almacen'
+#class AlmacenConfig(AppConfig):
+#    name = 'almacen'

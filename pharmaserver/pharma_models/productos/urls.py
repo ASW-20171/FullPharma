@@ -3,7 +3,7 @@ from rest_framework import routers
 from rest_framework_extensions.routers import ExtendedSimpleRouter
 
 
-from .views import ProductoViewSet
+from pharma_models.productos.views import ProductoViewSet
 
 
 # from .api_views import load_menu
@@ -11,15 +11,10 @@ from .views import ProductoViewSet
 #router = ExtendedSimpleRouter()
 router = routers.DefaultRouter()
 
-router.register(r'almacen', ProductoViewSet)
-
-#router.register(r'almacenes', AlmacenViewSet)
+router.register(r'productos', ProductoViewSet)
 
 urlpatterns = [
 
-    url(r'^almacen/$', ProductoViewSet),
-
-#    url(r'^almacen/$', AlmacenViewSet),
-
+    url(r'^producto/$', ProductoViewSet),
     url(r'^', include(router.urls)),
 ]

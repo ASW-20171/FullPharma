@@ -21,10 +21,12 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^api/pharma/', include(usuarios_urls)),
+    url(r'^api/', include(usuarios_urls)),
 
-    url(r'^api/pharma/', include('pharma_models.almacen.urls')),
-    url(r'^api/pharma/', include('pharma_models.venta.urls')),
-    url(r'^api/pharma/', include('pharma_models.compra.urls')),
-    url(r'^api/pharma/', include('pharma_models.persona.urls')),
+    url(r'^api/', include('pharma_models.almacen.urls')),
+    url(r'^api/', include('pharma_models.venta.urls')),
+    url(r'^api/', include('pharma_models.compra.urls')),
+    url(r'^api/', include('pharma_models.persona.urls')),
+    url(r'^api/', include('pharma_models.categorias.urls')),
+     url(r'^api/', include('pharma_models.productos.urls')),
 ]

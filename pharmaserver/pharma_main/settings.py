@@ -46,7 +46,9 @@ INSTALLED_APPS = [
     'pharma_models.venta',
     'pharma_models.compra',
     'pharma_models.persona',
-    'pharma_models.usuarios'
+    'pharma_models.usuarios',
+    'pharma_models.categorias',
+    'pharma_models.productos'
 ]
 
 

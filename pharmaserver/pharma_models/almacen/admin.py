@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import ProductoMdl, AlmacenMdl
+from .models import ProductoMdl
 
 # Register your models here.
 
 admin.site.register(ProductoMdl)
-admin.site.register(AlmacenMdl)
+#admin.site.register(AlmacenMdl)
