@@ -1,0 +1,54 @@
+
+
+  <div class="col s12 m12 l12">
+    <div class="card">
+      <div class="card-content">
+      <div class="card-title-search">
+          
+        </div>
+        <app-title-search action-method="buscar(term)" min-length="0" show-input="true" term="{{search}}" title="Productos"></app-title-search>
+        
+        <div class="table-wrapper">
+        <table class="highlight striped">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Codigo</th>  
+            <th>Nombre</th>     
+            <th>Estado</th>      
+            <th>Opc</th>
+          </tr>
+          </thead>
+          <tbody>
+         
+          <tr ng-repeat="p in producto">
+            <td>{{$index+1}}</td>
+            <td>{{p.codigo}}</td>
+            <td>{{p.nombre}}</td>
+            <td>{{p.estado}}</td>
+             <td>
+           
+               
+              <button class="btn-floating waves-effect waves-light light-blue darken-2" name="action">
+                <i class="material-icons">mode_edit</i>
+                <md-tooltip md-direction="left">
+                  Editar
+                </md-tooltip>
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </div>
+    <div class="fixed-action-btn" style="bottom: 25px; right: 25px;">
+      <a class="btn-floating btn-large waves-effect waves-light red right z-depth-2"><i
+        class="material-icons" ui-sref="_.productos.nuevo">add</i>
+        <md-tooltip md-direction="top">
+          Agregar
+        </md-tooltip>
+      </a>
+    </div>
+  </div>
+</div>

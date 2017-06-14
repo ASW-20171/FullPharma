@@ -20,7 +20,7 @@ angular.module('pharmawebApp').factory('authService', ['$http', '$q', 'localStor
 
       var deferred = $q.defer();
 
-      $http.post(serviceBase + 'o/token/', data, {
+      $http.post(serviceBase + '/', data, {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded'
         }
@@ -44,7 +44,7 @@ angular.module('pharmawebApp').factory('authService', ['$http', '$q', 'localStor
           localStorageService.set('authorizationData', x);
 
           _authentication.userRetrieved = true;
-          _authentication.cuenta = info.data[0];
+          _authentication.usuarios = info.data[0];
           deferred.resolve(info);
 
         }, function(erro) {
@@ -56,7 +56,7 @@ angular.module('pharmawebApp').factory('authService', ['$http', '$q', 'localStor
         //   console.log("llegando");
         //   console.log(result);
         //   _authentication.userRetrieved = true;
-        //   _authentication.cuenta = result.data[0];
+        //   _authentication.usuarios = result.data[0];
         //   deferred.resolve(result);
         //   console.log("Resuelto");
         // });
@@ -84,7 +84,7 @@ angular.module('pharmawebApp').factory('authService', ['$http', '$q', 'localStor
 
 
     function getUserInfo() {
-      return $http.get(serviceBase + 'api/auth/cuenta/');
+      return $http.get(serviceBase + 'api/auth/usuarios/');
     }
 
     var _fillAuthData = function() {
@@ -95,7 +95,7 @@ angular.module('pharmawebApp').factory('authService', ['$http', '$q', 'localStor
         if (!_authentication.userRetrieved) {
           return getUserInfo().then(function(result) {
             _authentication.userRetrieved = true;
-            _authentication.cuenta = result.data[0];
+            _authentication.usuarios = result.data[0];
           });
         }
 

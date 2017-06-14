@@ -28,17 +28,25 @@
         <i class="material-icons">home</i>Home
       </div>
     </li>
-    <li ng-repeat="g in grupos">
+    <li >
       <div class="collapsible-header waves-effect waves-block waves-light">
-        <i class="material-icons">{{g.icono}}</i>{{g.nombre}}
+        <i class="material-icons">home</i><p>Ventas</p>
         <i class="material-icons expand-less">expand_less</i>
         <i class="material-icons expand-more">expand_more</i>
       </div>
       <div class="collapsible-body">
         <ul class="collection">
-          <li class="collection-item waves-effect waves-block waves-light" ng-repeat="a in g.accesos">
-            <a class="tooltipped" data-position="right" data-tooltip="{{a.nombre}}" ui-sref-active="active" ui-sref="{{a.url}}">
-              <i class="material-icons">{{a.icono}}</i>{{a.nombre}}</a>
+          <li class="collection-item waves-effect waves-block waves-light">
+            <a class="tooltipped" data-position="right" data-tooltip="categoria" ui-sref-active="active" ui-sref="_.categorias.list">
+              <i class="material-icons">aqui1</i>categoria</a>
+          </li>
+        </ul>
+      </div>
+      <div class="collapsible-body">
+        <ul class="collection">
+          <li class="collection-item waves-effect waves-block waves-light">
+            <a class="tooltipped" data-position="right" data-tooltip="producto" ui-sref-active="active" ui-sref="_.productos.list">
+              <i class="material-icons">aqui1</i>producto</a>
           </li>
         </ul>
       </div>
@@ -76,17 +84,17 @@
         <i class="material-icons">home</i>Home
       </div>
     </li>
-    <li ng-repeat="g in grupos">
+    <li>
       <div class="collapsible-header waves-effect waves-block waves-light">
-        <i class="material-icons">{{g.icono}}</i>{{g.nombre}}
+        <i class="material-icons">icono23</i>icono2323
         <i class="material-icons expand-less">expand_less</i>
         <i class="material-icons expand-more">expand_more</i>
       </div>
       <div class="collapsible-body">
         <ul class="collection">
-          <li class="collection-item waves-effect waves-block waves-light" ng-repeat="a in g.accesos">
-            <a class="tooltipped" data-position="right" data-tooltip="{{a.nombre}}" ui-sref-active="active" ui-sref="{{a.url}}">
-              <i class="material-icons">{{a.icono}}</i>{{a.nombre}}</a>
+          <li class="collection-item waves-effect waves-block waves-light">
+            <a class="tooltipped" data-position="right" data-tooltip="icono2323" ui-sref-active="active" ui-sref="aqui url">
+              <i class="material-icons">ic2323</i>ico2323</a>
           </li>
         </ul>
       </div>

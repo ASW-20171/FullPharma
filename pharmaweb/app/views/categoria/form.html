@@ -1,0 +1,32 @@
+<app-loader ng-if="showLoader"></app-loader>
+<div class="row" ng-if="!showLoader">
+    <div class="col s12 m12 l12">
+        <div class="card">
+            <form name="form" ng-submit="guardar()">
+                <div class="card-content">
+                    <h4 class="header">Registro de Categor&iacute;as de Licencia</h4>
+                    <div class="row">
+                        <div class="col s12 m12 l12">
+                            <div class="card-panel col l6 estilo-caja">
+                                <div class="input-field ">
+                                    <i class="material-icons prefix">style</i>
+                                    <input name="nombre" class="validate" id="nombre" ng-model="categoria_licencia.nombre" type="text" ng-class="{'invalid':categoria_licencia.nombre_invalid_class || (form.nombre.$invalid && form.nombre.$dirty) }" make-autofocus required>
+                                    <label for="nombre" data-error="{{categoria_licencia.nombre_error}}" class="active">Nombre</label>
+                                    <div class="msg" ng-messages="form.nombre.$error">
+                                        <div class="msg-info" ng-message="required">Este campo es requerido.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-action right-align">
+                    <input type="hidden" ng-model="categoria_licencia.id">
+                    <button class="waves-effect waves-light btn light-blue darken-2" type="submit" ng-disabled="form.nombre.$dirty && form.nombre.$invalid || form.nombre.$pristine && form.nombre.$invalid || clicked">Aceptar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

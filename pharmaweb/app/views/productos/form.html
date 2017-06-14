@@ -1,0 +1,54 @@
+
+<div class="row">
+    <div class="col s12 m12 l12">
+        <div class="card">
+            <form name="form" ng-submit="guardar()">
+                <div class="card-content">
+                    <h4 class="header">Registro de Productos</h4>
+                    <div class="row">
+                        <div class="card-panel estilo-caja col s12 m12 l6">
+                            <div class="input-field">
+                                <i class="material-icons prefix">location_city</i>
+                                <input id="codigo" name="codigo" ng-model="producto.codigo" type="text" ng-class="{'invalid':producto.nombre_invalid_class || (form.codigo.$invalid && form.codigo.$dirty) }"  required make-autofocus/>
+                                <label for="codigo" data-error="{{producto.nombre_error}}" class="{{producto.codigo.length > 0?'active':''}}">Codigo *</label>
+                                <div class="msg" ng-messages="form.codigo.$error">
+                                    <div class="msg-info" ng-message="required"> Este campo es requerido.</div>
+                                </div>
+                            </div>
+                            <div class="input-field">
+                                <i class="material-icons prefix">location_city</i>
+                                <input id="nombre" name="nombre" ng-model="producto.nombre" type="text" ng-class="{'invalid':producto.nombre_invalid_class || (form.nombre.$invalid && form.nombre.$dirty) }"  required make-autofocus>
+                                <label for="nombre" data-error="{{producto.nombre_error}}" class="{{producto.nombre.length > 0?'active':''}}">Nombre *</label>
+                                <div class="msg" ng-messages="form.nombre.$error">
+                                    <div class="msg-info" ng-message="required"> Este campo es requerido.</div>
+                                </div>
+                            </div>
+                            <div class="input-field">
+                                <input id="principal" ng-model="producto.estado" type="checkbox">
+                                <label >Estado</label>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="card-action right-align">
+                    <input type="hidden" ng-model="producto.id">
+                    <button class="waves-effect waves-light btn light-blue darken-2" type="submit" ng-disabled="form.nombre.$dirty && form.nombre.$invalid || form.nombre.$pristine && form.nombre.$invalid ||clicked">Aceptar
+                    </button>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    function soloTexto() {
+    if ((event.keyCode != 32) && (event.keyCode < 65) || (event.keyCode > 90) && (event.keyCode < 97) ||
+        (event.keyCode > 122) && (event.keyCode < 130)|| (event.keyCode > 130)&&(event.keycode <160)||(event.keycode > 165 ))
+      event.returnValue = false;
+};
+
+</script>
+
