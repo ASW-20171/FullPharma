@@ -20,8 +20,6 @@ class UsuarioViewSet(viewsets.ModelViewSet):
 
 class TipoDocSerializer(serializers.ModelSerializer):
 
-    # producto = ProductoSerializer(read_only=True)
-
     class Meta:
         model = TipoDocMdl
 
@@ -30,9 +28,7 @@ class TipoDocViewSet(viewsets.ModelViewSet):
     serializer_class = TipoDocSerializer
 
 class ClienteSerializer(serializers.ModelSerializer):
-
-    # producto = ProductoSerializer(read_only=True)
-
+    doc = TipoDocSerializer(read_only=True)
     class Meta:
         model = ClienteMdl
 
@@ -41,9 +37,7 @@ class ClienteViewSet(viewsets.ModelViewSet):
     serializer_class = ClienteSerializer
 
 class ProveedorSerializer(serializers.ModelSerializer):
-
-    # producto = ProductoSerializer(read_only=True)
-
+    doc = TipoDocSerializer(read_only=True)
     class Meta:
         model = ProveedorMdl
 
