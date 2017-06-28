@@ -25,10 +25,10 @@ angular.module('pharmawebApp')
     var loadData = function () {
       ProductoService.get($stateParams.id).then(function (response) {
         $scope.producto = response.data;
-        $scope.showLoader = false;
+        
       }, function (response) {
         Materialize.toast('Error al obtener datos del servidor.', 3000, 'red');
-        $scope.showLoader = false;
+        
       });
     };
 

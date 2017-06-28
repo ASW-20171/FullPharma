@@ -29,12 +29,19 @@
              <td>
            
                
-              <button class="btn-floating waves-effect waves-light light-blue darken-2" name="action">
+              <button class="btn-floating waves-effect waves-light light-blue darken-2" name="action" ui-sref="_.productos.edit({id:{{p.id}},search:''})">
                 <i class="material-icons">mode_edit</i>
                 <md-tooltip md-direction="left">
                   Editar
                 </md-tooltip>
               </button>
+              <button class="btn-floating  waves-effect waves-light red z-depth-2" name="action"
+                            ng-click="eliminar(p,$index)">
+                      <i class="material-icons">delete</i>
+                      <md-tooltip md-direction="left">
+                        Eliminar
+                      </md-tooltip>
+                    </button>
             </td>
           </tr>
           </tbody>

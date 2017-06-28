@@ -23,10 +23,8 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api/', include(usuarios_urls)),
 
-    url(r'^api/', include('pharma_models.almacen.urls')),
-    url(r'^api/', include('pharma_models.venta.urls')),
-    url(r'^api/', include('pharma_models.compra.urls')),
-    url(r'^api/', include('pharma_models.persona.urls')),
+    url(r'^api/', include('pharma_models.ventas.urls')),
+    url(r'^api/', include('pharma_models.personas.urls')),
     url(r'^api/', include('pharma_models.categorias.urls')),
-     url(r'^api/', include('pharma_models.productos.urls')),
+    url(r'^api/', include('pharma_models.productos.urls')),
 ]

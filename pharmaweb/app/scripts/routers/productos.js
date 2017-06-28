@@ -11,7 +11,7 @@ routerApp.config(function ($urlRouterProvider, $locationProvider, $stateProvider
       label: "Lista Productos"
     },
     resolve: {
-      listas: function (ProductoService) {
+      productos: function (ProductoService) {
         return ProductoService.getAll().then(function (response) {
           return response.data.results;
         });

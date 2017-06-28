@@ -12,11 +12,12 @@ angular.module('pharmawebApp')
       ProductoService.create($scope.producto).then(function (response) {
         Materialize.toast('Cambios registrados correctamente.', 3000, 'light-blue darken-2');
         $scope.producto.nombre_invalid_class = false;
-          $state.go('^', {});
+        $state.go('^', {});
 
       }, function (response) {
         $scope.clicked = false;
         Materialize.toast('Error al registrar cambios.', 3000, 'red');
+
 
         for (var key in response.data) {
           $scope.producto[key + '_error'] = response.data[key].toString();

@@ -42,14 +42,15 @@ INSTALLED_APPS = [
     'corsheaders',
     'oauth2_provider',
 
-    'pharma_models.almacen',
-    'pharma_models.venta',
-    'pharma_models.compra',
-    'pharma_models.persona',
+   
     'pharma_models.usuarios',
+    'pharma_models.personas',
     'pharma_models.categorias',
-    'pharma_models.productos'
-]
+    'pharma_models.productos',
+    'pharma_models.proveedores',
+    'pharma_models.clientes',
+    'pharma_models.ventas'
+    ]
 
 
 
